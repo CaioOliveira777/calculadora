@@ -10,44 +10,46 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./calculadora.css">
-    <script src="./calculadora.js"></script>
+    <script src="calculadora.js"></script>
 </head>
 <body>
     <div class="background">
         <h1>Calculadora</h1>
         <h2>® Caio Nascimento e Iago Nascimento</h2>
         <div class="divCalculadora">
-            <p id="resultado">resultado</p>
+            <p id="resultado"></p>
+            <div class="divTeclas">
             <table>
                 <tr>
-                        <td><button>C</button></td>
-                        <td><button><</button></td>
-                        <td><button>/</button></td>
-                        <td><button>X</button></td>
+                        <td><button onclick="limpar()" >C</button></td>
+                        <td><button onclick="apagar()"><</button></td>
+                        <td><button onclick="inserirNumeros('/')">/</button></td>
+                        <td><button onclick="inserirNumeros('*')">X</button></td>
                 </tr>
                 <tr>
-                        <td><button>7</button></td>
-                        <td><button>8</button></td>
-                        <td><button>9</button></td>
-                        <td><button>-</button></td>
+                        <td><button onclick="inserirNumeros('7')">7</button></td>
+                        <td><button onclick="inserirNumeros('8')">8</button></td>
+                        <td><button onclick="inserirNumeros('9')">9</button></td>
+                        <td><button onclick="inserirNumeros('-')">-</button></td>
                 </tr>
                 <tr>
-                        <td><button>4</button></td>
-                        <td><button>5</button></td>
-                        <td><button>6</button></td>
-                        <td><button>+</button></td>
+                        <td><button onclick="inserirNumeros('4')">4</button></td>
+                        <td><button onclick="inserirNumeros('5')">5</button></td>
+                        <td><button onclick="inserirNumeros('6')">6</button></td>
+                        <td><button onclick="inserirNumeros('+')">+</button></td>
                 </tr>
                 <tr>
-                        <td><button>1</button></td>
-                        <td><button>2</button></td>
-                        <td><button>3</button></td>
-                        <td rowspan="2"><button  style="height:106px;">=</button></td>
+                        <td><button onclick="inserirNumeros('1')">1</button></td>
+                        <td><button onclick="inserirNumeros('2')">2</button></td>
+                        <td><button onclick="inserirNumeros('3')">3</button></td>
+                        <td rowspan="2"><button  style="height:106px;" onclick="calcular()">=</button></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button  style="width:106px;">0</button></td>
-                    <td><button>.</button></td>
+                    <td colspan="2"><button  style="width:106px;" onclick="inserirNumeros('0')">0</button></td>
+                    <td><button onclick="inserirNumeros('.')">.</button></td>
                 </tr>
             </table>
+        </div>
         </div>
     </div>
 </body>
