@@ -43,14 +43,21 @@ h2 {
     height: 60%;
     background-color: #6e6d6d9d;
     border-radius: 10px;
-    padding: 17px;
+    padding: 15px;
     align-self: center;
 }
 
 button {
+    margin: 3px;
     width: 50px;
     height: 50px;
     font-size: 25px;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;;
+}
+button:hover {
+    background-color: #c0bdbd;
+    cursor: pointer;
+    border: none;
+    color: #000000;
 }
